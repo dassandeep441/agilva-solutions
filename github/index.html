@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svc-tile:hover::before{opacity:1;}
 .svc-tile-num{font-size:10px;letter-spacing:.2em;color:var(--muted);margin-bottom:24px;font-family:var(--sans);}
 .svc-tile-name{font-family:var(--serif);font-size:24px;font-weight:300;margin-bottom:14px;line-height:1.1;}
-.svc-tile-desc{font-size:13px;color:var(--muted);line-height:1.75;flex:1;font-weight:300;}
+.svc-tile-desc{font-size:12.25px;color:var(--muted);line-height:1.75;flex:1;font-weight:250;}
 
 /* Steps */
 .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
@@ -105,7 +105,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .badge-tile{background:var(--bg3);border:0.5px solid var(--accent);border-radius:14px;padding:32px 20px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:background .3s,transform .25s,border-color .3s,box-shadow .3s;}
 .badge-tile:hover{background:var(--bg4);border-color:var(--accent2);transform:translateY(-5px);box-shadow:0 0 24px rgba(184,152,96,.12);}
 .badge-tile img{width:96px;height:96px;object-fit:contain;border-radius:6px;margin-bottom:16px;}
-.badge-tile-name{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted2);line-height:1.6;font-family:var(--sans);font-weight:300;}
+.badge-tile-name{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted2);line-height:1.6;font-family:var(--sans);font-weight:300;}
 
 /* CTA strip */
 .cta-strip{background:var(--bg2);padding:96px 56px;border-top:0.5px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;}
@@ -187,7 +187,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <li class="has-drop">
       <a href="/#services" class="active">Services</a>
       <div class="dropdown">
-        <a href="/atlassian/"><span class="dropdown-dot"></span>Atlassian</a>
+        <a href="/atlassian/" class="current"><span class="dropdown-dot"></span>Atlassian</a>
         <a href="/servicenow/"><span class="dropdown-dot"></span>ServiceNow</a>
         <div class="dropdown-divider"></div>
         <a href="/github/"><span class="dropdown-dot"></span>GitHub</a>
@@ -301,11 +301,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="footer-nav-grid">
     <div class="footer-brand">
       <img src="/agilva-solutions/logo.png" alt="Agilva Solutions"/>
-      <p>A boutique consultancy helping ambitious teams define direction and execute with precision. Based in Cuttack &mdash; working globally.</p>
+      <p>An IT consultancy helping ambitious teams define direction and execute with precision. Based in India &mdash; working globally.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Practices</div>
-      <ul><li><a href="/atlassian/">Atlassian</a></li><li><a href="/github/">GitHub</a></li><li><a href="/servicenow/">ServiceNow</a></li><li><a href="/clickup/">ClickUp</a></li><li><a href="/asana/">Asana</a></li></ul>
+      <ul><li><a href="/atlassian/">Atlassian</a></li><li><a href="/servicenow/">ServiceNow</a></li><li><a href="/github/">GitHub</a></li><li><a href="/clickup/">ClickUp</a></li><li><a href="/asana/">Asana</a></li></ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
@@ -329,24 +329,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <div class="popup-tag">Get in touch</div>
     <h2 class="popup-title">Let&rsquo;s<br><em>talk.</em></h2>
     <p class="popup-desc">Tell us about your project. We&rsquo;ll get back to you within one business day.</p>
-    <form id="popup-form" onsubmit="sendForm(event)">
-      <div class="form-row-2">
-        <div class="form-row" style="margin-bottom:0;"><label class="form-label">First name</label><input class="form-input" type="text" name="first_name" placeholder="John" required/></div>
-        <div class="form-row" style="margin-bottom:0;"><label class="form-label">Last name</label><input class="form-input" type="text" name="last_name" placeholder="Smith" required/></div>
+    <form id="hp-popup-form" onsubmit="handlePopupSubmit(event)">
+      <div class="p-form-row-2">
+        <div class="p-form-row" style="margin-bottom:0;"><label class="p-form-label">First name</label><input class="p-form-input" type="text" placeholder="John" required/></div>
+        <div class="p-form-row" style="margin-bottom:0;"><label class="p-form-label">Last name</label><input class="p-form-input" type="text" placeholder="Smith" required/></div>
       </div>
-      <div class="form-row"><label class="form-label">Work email</label><input class="form-input" type="email" name="email" placeholder="john@company.com" required/></div>
-      <div class="form-row"><label class="form-label">Company</label><input class="form-input" type="text" name="company" placeholder="Your company name"/></div>
-      <div class="form-row">
-        <label class="form-label">Service interested in</label>
-        <select class="form-select form-input" name="service">
-          <option value="" disabled>Select a service</option>
-          <option>Atlassian</option><option selected>GitHub</option><option>ServiceNow</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
+      <div class="p-form-row"><label class="p-form-label">Work email</label><input class="p-form-input" type="email" placeholder="john@company.com" required/></div>
+      <div class="p-form-row"><label class="p-form-label">Company</label><input class="p-form-input" type="text" placeholder="Your company name"/></div>
+      <div class="p-form-row">
+        <label class="p-form-label">Service interested in</label>
+        <select class="p-form-select p-form-input">
+          <option value="" disabled selected>Select a service</option>
+          <option>Atlassian</option><option>ServiceNow</option><option>GitHub</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
         </select>
       </div>
-      <div class="form-row"><label class="form-label">Message</label><textarea class="form-textarea" name="message" placeholder="Tell us about your project or challenge..." required></textarea></div>
-      <div class="captcha-wrap"><div class="g-recaptcha" data-sitekey="6LfRB5AsAAAAANxQWNRTov7wNTR0nG_RvYS_oUaP" data-theme="dark"></div></div>
-      <button type="submit" class="form-submit">Send Message &rarr;</button>
-      <p class="form-note">We respect your privacy. Your information is never shared with third parties.</p>
+      <div class="p-form-row"><label class="p-form-label">Message</label><textarea class="p-form-textarea" placeholder="Tell us about your project or challenge..." required></textarea></div>
+      <div class="p-captcha-wrap"><div class="g-recaptcha" data-sitekey="6LfRB5AsAAAAANxQWNRTov7wNTR0nG_RvYS_oUaP" data-theme="dark"></div></div>
+      <button type="submit" class="p-form-submit">Send Message &rarr;</button>
+      <p class="p-form-note">We respect your privacy. Your information is never shared with third parties.</p>
     </form>
   </div>
 </div>
