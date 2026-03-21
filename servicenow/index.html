@@ -30,14 +30,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-logo img{height:44px;width:auto;object-fit:contain;transform:scale(2.2);transform-origin:left center;}
 .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
 .nav-links>li{position:relative;}
-.nav-links>li>a{color:var(--muted2);text-decoration:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;transition:color .2s;font-family:var(--sans);font-weight:300;padding:8px 14px;display:flex;align-items:center;gap:5px;}
+.nav-links>li>a{color:var(--muted2);text-decoration:none;font-size:12.25px;letter-spacing:.16em;text-transform:uppercase;transition:color .2s;font-family:var(--sans);font-weight:300;padding:8px 14px;display:flex;align-items:center;gap:5px;}
 .nav-links>li>a:hover{color:var(--text);}
 .nav-links>li>a.active{color:var(--accent);}
 .has-drop>a::after{content:'';width:5px;height:5px;border-right:0.5px solid currentColor;border-bottom:0.5px solid currentColor;transform:rotate(45deg) translateY(-2px);display:inline-block;transition:transform .2s;}
 .has-drop:hover>a::after{transform:rotate(-135deg) translateY(-2px);}
 .dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:220px;background:rgba(14,14,14,.88);backdrop-filter:blur(24px);border:0.5px solid rgba(184,152,96,.18);border-radius:12px;padding:10px 0;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s;pointer-events:none;}
 .has-drop:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:all;}
-.dropdown a{display:flex;align-items:center;gap:12px;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color .2s,background .2s;font-family:var(--sans);font-weight:300;}
+.dropdown a{display:flex;align-items:center;gap:12px;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:capitalize;color:var(--muted2);text-decoration:none;transition:color .2s,background .2s;font-family:var(--sans);font-weight:300;}
 .dropdown a:hover{color:var(--accent);background:rgba(184,152,96,.05);}
 .dropdown a.current{color:var(--tool);}
 .dropdown-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;opacity:.5;}
@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sec-title{font-family:var(--serif);font-size:clamp(32px,4vw,56px);font-weight:300;line-height:1.05;letter-spacing:-.01em;margin-bottom:16px;}
 .sec-title em{font-style:italic;color:var(--accent);}
 .sec-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:24px;}
-.sec-header-right{font-size:13px;color:var(--muted);max-width:260px;line-height:1.8;font-weight:300;text-align:right;}
+.sec-header-right{font-size:14px;color:var(--muted);max-width:260px;line-height:1.8;font-weight:300;text-align:right;}
 
 /* Service tiles */
 .svc-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svc-tile:hover::before{opacity:1;}
 .svc-tile-num{font-size:10px;letter-spacing:.2em;color:var(--muted);margin-bottom:24px;font-family:var(--sans);}
 .svc-tile-name{font-family:var(--serif);font-size:24px;font-weight:300;margin-bottom:14px;line-height:1.1;}
-.svc-tile-desc{font-size:12px;color:var(--muted);line-height:1.85;flex:1;font-weight:300;}
+.svc-tile-desc{font-size:12.25px;color:var(--muted);line-height:1.85;flex:1;font-weight:250;}
 
 /* Steps */
 .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
@@ -87,7 +87,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .step-item:last-child{border-right:none;}
 .step-num{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--accent);opacity:.25;line-height:1;margin-bottom:20px;}
 .step-title{font-size:13px;font-weight:400;margin-bottom:10px;color:var(--text);}
-.step-desc{font-size:12px;color:var(--muted);line-height:1.75;font-weight:300;}
+.step-desc{font-size:13px;color:var(--muted);line-height:1.75;font-weight:300;}
 
 /* Two col */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
@@ -98,7 +98,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .feature-row:first-child{border-top:0.5px solid var(--line);}
 .feature-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;}
 .feature-title{font-size:13px;font-weight:400;margin-bottom:4px;color:var(--text);}
-.feature-desc{font-size:12px;color:var(--muted);line-height:1.75;font-weight:300;}
+.feature-desc{font-size:13px;color:var(--muted);line-height:1.75;font-weight:300;}
 
 /* CTA strip */
 .cta-strip{background:var(--bg2);padding:96px 56px;border-top:0.5px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;}
@@ -183,10 +183,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <li class="has-drop">
       <a href="/#services" class="active">Services</a>
       <div class="dropdown">
-        <a href="/atlassian/"><span class="dropdown-dot"></span>Atlassian</a>
-        <a href="/github/"><span class="dropdown-dot"></span>GitHub</a>
+        <a href="/atlassian/" class="current"><span class="dropdown-dot"></span>Atlassian</a>
+        <a href="/servicenow/"><span class="dropdown-dot"></span>ServiceNow</a>
         <div class="dropdown-divider"></div>
-        <a href="/servicenow/" class="current"><span class="dropdown-dot"></span>ServiceNow</a>
+        <a href="/github/"><span class="dropdown-dot"></span>GitHub</a>
         <a href="/clickup/"><span class="dropdown-dot"></span>ClickUp</a>
         <a href="/asana/"><span class="dropdown-dot"></span>Asana</a>
       </div>
@@ -269,11 +269,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="footer-nav-grid">
     <div class="footer-brand">
       <img src="/agilva-solutions/logo.png" alt="Agilva Solutions"/>
-      <p>A boutique consultancy helping ambitious teams define direction and execute with precision. Based in Cuttack &mdash; working globally.</p>
+      <p>An IT consultancy helping ambitious teams define direction and execute with precision. Based in India &mdash; working globally.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Practices</div>
-      <ul><li><a href="/atlassian/">Atlassian</a></li><li><a href="/github/">GitHub</a></li><li><a href="/servicenow/">ServiceNow</a></li><li><a href="/clickup/">ClickUp</a></li><li><a href="/asana/">Asana</a></li></ul>
+      <ul><li><a href="/atlassian/">Atlassian</a></li><li><a href="/servicenow/">ServiceNow</a></li><li><a href="/github/">GitHub</a></li><li><a href="/clickup/">ClickUp</a></li><li><a href="/asana/">Asana</a></li></ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
@@ -281,12 +281,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Connect</div>
-      <ul><li><a href="#">LinkedIn</a></li><li><a href="#">Twitter / X</a></li><li><a href="#">Dribbble</a></li><li><a href="mailto:info@agilva.com">info@agilva.com</a></li></ul>
+      <ul><li><a href="#">LinkedIn</a></li><li><a href="#">Twitter / X</a></li><li><a href="#">Upwork</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2025 Agilva. All rights reserved.</span>
-    <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Dribbble</a></div>
+    <span class="footer-copy">&copy; 2026 Agilva Solutions. All rights reserved.</span>
+    <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Upwork</a></div>
   </div>
 </div>
 
@@ -297,34 +297,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <div class="popup-tag">Get in touch</div>
     <h2 class="popup-title">Let&rsquo;s<br><em>talk.</em></h2>
     <p class="popup-desc">Tell us about your project. We&rsquo;ll get back to you within one business day.</p>
-    <div class="popup-detail">
-      <div class="popup-detail-item"><span class="popup-detail-dot"></span><a href="mailto:info@agilva.com">info@agilva.com</a></div>
-      <div class="popup-detail-item"><span class="popup-detail-dot"></span>Cuttack, Odisha, India</div>
-      <div class="popup-detail-item"><span class="popup-detail-dot"></span>Available globally</div>
-    </div>
-    <div class="popup-divider"></div>
-    <form id="popup-form" onsubmit="handlePopupSubmit(event)">
-      <div class="form-row-2">
-        <div class="form-row" style="margin-bottom:0;"><label class="form-label">First name</label><input class="form-input" type="text" placeholder="John" required/></div>
-        <div class="form-row" style="margin-bottom:0;"><label class="form-label">Last name</label><input class="form-input" type="text" placeholder="Smith" required/></div>
+    <form id="hp-popup-form" onsubmit="handlePopupSubmit(event)">
+      <div class="p-form-row-2">
+        <div class="p-form-row" style="margin-bottom:0;"><label class="p-form-label">First name</label><input class="p-form-input" type="text" placeholder="John" required/></div>
+        <div class="p-form-row" style="margin-bottom:0;"><label class="p-form-label">Last name</label><input class="p-form-input" type="text" placeholder="Smith" required/></div>
       </div>
-      <div class="form-row"><label class="form-label">Work email</label><input class="form-input" type="email" placeholder="john@company.com" required/></div>
-      <div class="form-row"><label class="form-label">Company</label><input class="form-input" type="text" placeholder="Your company name"/></div>
-      <div class="form-row">
-        <label class="form-label">Service interested in</label>
-        <select class="form-select form-input">
+      <div class="p-form-row"><label class="p-form-label">Work email</label><input class="p-form-input" type="email" placeholder="john@company.com" required/></div>
+      <div class="p-form-row"><label class="p-form-label">Company</label><input class="p-form-input" type="text" placeholder="Your company name"/></div>
+      <div class="p-form-row">
+        <label class="p-form-label">Service interested in</label>
+        <select class="p-form-select p-form-input">
           <option value="" disabled selected>Select a service</option>
-          <option>Atlassian</option><option selected>ServiceNow</option><option>GitHub</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
+          <option>Atlassian</option><option>ServiceNow</option><option>GitHub</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
         </select>
       </div>
-      <div class="form-row"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your project or challenge..." required></textarea></div>
-      <div class="captcha-wrap"><div class="g-recaptcha" data-sitekey="6LfRB5AsAAAAANxQWNRTov7wNTR0nG_RvYS_oUaP" data-theme="dark"></div></div>
-      <button type="submit" class="form-submit">Send Message &rarr;</button>
-      <p class="form-note">We respect your privacy. Your information is never shared with third parties.</p>
+      <div class="p-form-row"><label class="p-form-label">Message</label><textarea class="p-form-textarea" placeholder="Tell us about your project or challenge..." required></textarea></div>
+      <div class="p-captcha-wrap"><div class="g-recaptcha" data-sitekey="6LfRB5AsAAAAANxQWNRTov7wNTR0nG_RvYS_oUaP" data-theme="dark"></div></div>
+      <button type="submit" class="p-form-submit">Send Message &rarr;</button>
+      <p class="p-form-note">We respect your privacy. Your information is never shared with third parties.</p>
     </form>
   </div>
 </div>
-
+  
 <script>
   // Cursor
   const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
