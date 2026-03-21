@@ -36,7 +36,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .has-drop:hover > a::after{transform:rotate(-135deg) translateY(-2px);}
 .dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:220px;background:rgba(14,14,14,.88);backdrop-filter:blur(24px);border:0.5px solid rgba(184,152,96,.18);border-radius:12px;padding:10px 0;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s;pointer-events:none;}
 .has-drop:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:all;}
-.dropdown a{display:flex;align-items:center;gap:12px;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color .2s,background .2s;font-family:var(--sans);font-weight:300;}
+.dropdown a{display:flex;align-items:center;gap:12px;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:capitalize;color:var(--muted2);text-decoration:none;transition:color .2s,background .2s;font-family:var(--sans);font-weight:300;}
 .dropdown a:hover{color:var(--accent);background:rgba(184,152,96,.05);}
 .dropdown-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;opacity:.5;}
 .dropdown a:hover .dropdown-dot{opacity:1;}
@@ -87,7 +87,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svc-tile-icon svg{width:100%;height:100%;}
 .svc-tile-arrow{font-size:15px;color:var(--accent);opacity:0;transform:translate(-4px,4px);transition:opacity .2s,transform .2s;}
 .svc-tile-name{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:10px;line-height:1.1;position:relative;z-index:1;}
-.svc-tile-desc{font-size:12px;color:var(--muted);line-height:1.75;flex:1;margin-bottom:20px;font-weight:250;position:relative;z-index:1;}
+.svc-tile-desc{font-size:13px;color:var(--muted);line-height:1.75;flex:1;margin-bottom:20px;font-weight:250;position:relative;z-index:1;}
 .svc-tile-tags{display:flex;flex-wrap:wrap;gap:6px;position:relative;z-index:1;}
 .svc-tile-tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:0.5px solid rgba(184,152,96,.2);color:var(--muted);padding:3px 8px;border-radius:4px;transition:border-color .2s,color .2s;}
 .svc-tile:hover .svc-tile-tag{border-color:rgba(184,152,96,.4);color:var(--muted2);}
@@ -115,7 +115,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .blog-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:0.5px solid;padding:3px 10px;border-radius:4px;}
 .blog-meta{font-size:10px;color:var(--muted);letter-spacing:.08em;}
 .blog-title{font-family:var(--serif);font-size:21px;font-weight:300;line-height:1.25;margin-bottom:14px;}
-.blog-desc{font-size:12px;color:var(--muted);line-height:1.85;flex:1;margin-bottom:24px;font-weight:300;}
+.blog-desc{font-size:12.25px;color:var(--muted);line-height:1.85;flex:1;margin-bottom:24px;font-weight:300;}
 .blog-read{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:color .2s;}
 .blog-read span{display:inline-block;transition:transform .2s;}
 
@@ -213,7 +213,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <li class="has-drop">
       <a href="#services">Services</a>
       <div class="dropdown">
-        <a href="/atlassian/"><span class="dropdown-dot"></span>Atlassian</a>
+        <a href="/atlassian/" class="current"><span class="dropdown-dot"></span>Atlassian</a>
         <a href="/servicenow/"><span class="dropdown-dot"></span>ServiceNow</a>
         <div class="dropdown-divider"></div>
         <a href="/github/"><span class="dropdown-dot"></span>GitHub</a>
@@ -320,7 +320,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         everyone &mdash; we work with the <strong>right clients, deeply and well.</strong>
         Our process is deliberate, our standards are high, and our results speak for themselves.<br><br>
         Every engagement begins with listening. We believe the best solutions are discovered, not imposed.
-        Based in Cuttack &mdash; working globally.
+        Based in India &mdash; working globally.
       </div>
     <div class="reveal reveal-d1">
       <div class="stats-row">
@@ -399,7 +399,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
             <label class="form-label">Service interested in</label>
             <select class="form-select form-input">
               <option value="" disabled selected>Select a service</option>
-              <option>Atlassian</option><option>GitHub</option><option>ServiceNow</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
+              <option>Atlassian</option><option>ServiceNow</option><option>GitHub</option><option>ClickUp</option><option>Asana</option><option>General Consulting</option>
             </select>
           </div>
           <div class="form-row"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your project or challenge..." required></textarea></div>
@@ -416,14 +416,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="footer-nav-grid">
     <div class="footer-brand">
       <img src="/logo.png" alt="agilva"/>
-      <p>A boutique consultancy helping ambitious teams define direction and execute with precision. Based in Cuttack &mdash; working globally.</p>
+      <p>An IT consultancy helping ambitious teams define direction and execute with precision. Based in India &mdash; working globally.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Practices</div>
       <ul>
         <li><a href="/atlassian/">Atlassian</a></li>
-        <li><a href="/github/">GitHub</a></li>
         <li><a href="/servicenow/">ServiceNow</a></li>
+        <li><a href="/github/">GitHub</a></li>
         <li><a href="/clickup/">ClickUp</a></li>
         <li><a href="/asana/">Asana</a></li>
       </ul>
@@ -446,7 +446,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2026 Agilva. All rights reserved.</span>
+    <span class="footer-copy">&copy; 2026 Agilva Solutions. All rights reserved.</span>
     <div class="footer-socials">
       <a href="#">LinkedIn</a>
       <a href="#">Twitter</a>
