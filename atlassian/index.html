@@ -137,6 +137,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .footer-socials a{font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:.15em;text-transform:uppercase;transition:color .2s;}
 .footer-socials a:hover{color:var(--accent);}
 
+/* ── CONTACT ── */
+#contact{padding:100px 56px;border-top:0.5px solid var(--line);background:var(--bg2);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.contact-title{font-family:var(--serif);font-size:clamp(52px,6.5vw,88px);font-weight:300;line-height:.95;letter-spacing:-.02em;margin:0;}
+.contact-title em{font-style:italic;color:var(--accent);}
+.contact-desc{font-size:13px;color:var(--muted);line-height:1.8;font-weight:300;margin-top:20px;margin-bottom:0;}
+.contact-form-tile{background:var(--bg3);border:0.5px solid var(--accent);border-radius:14px;padding:28px 28px;}
+.form-row{margin-bottom:14px;}
+.form-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;display:block;font-family:var(--sans);}
+.form-input,.form-textarea,.form-select{width:100%;background:var(--bg2);border:0.5px solid var(--line2);border-radius:8px;padding:9px 13px;color:var(--text);font-family:var(--sans);font-size:12px;font-weight:300;outline:none;transition:border-color .2s;appearance:none;}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(184,152,96,.5);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--muted);}
+.form-textarea{resize:vertical;min-height:72px;line-height:1.6;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.captcha-wrap{margin-bottom:16px;display:flex;justify-content:flex-start;transform:scale(0.88);transform-origin:left;}
+.form-submit{width:100%;background:var(--accent);color:var(--bg);border:none;border-radius:8px;padding:11px 24px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-family:var(--sans);font-weight:400;cursor:pointer;transition:background .25s,transform .2s;}
+.form-submit:hover{background:var(--accent2);transform:translateY(-1px);}
+.form-note{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6;}
+
 /* Popup */
 .popup-overlay{position:fixed;inset:0;z-index:1000;background:rgba(4,4,4,.85);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s;}
 .popup-overlay.open{opacity:1;visibility:visible;}
